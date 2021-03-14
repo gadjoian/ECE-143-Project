@@ -25,7 +25,8 @@ This code should all be self contained. The three notebooks should be runnable a
 2. pandas 1.2.1
 3. matplotlib 3.3.4
 4. plotly 4.14.3
-5. countryinfo 0.1.2
+5. scipy 1.2.2
+6. countryinfo 0.1.2
 
 To download all of these dependencies in a convenient way, you can run pip install requirements.txt.
 
