@@ -48,6 +48,10 @@ def download_data():
         open(file_name, 'wb').write(r.content)
         counter += 1
 
+## Note, if you do not have the data downloaded you will need to uncomment this line and run download_data()
+## Note this will require 5+ gigabytes and take several minutes.
+## download_data()
+
 def read_multiple_files(fields, filename_template):
     '''
     provide the file names to read in and the columns to read
