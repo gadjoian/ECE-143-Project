@@ -9,7 +9,8 @@ This repository consists of two directories, several notebooks, and our final pr
 The src directory contains the .py versions of the notebooks. Finally the root directory of the repository contains all of the notebooks and our presentation. These notebooks should be fully contained, and can simply be run. **CountryAndGlobalAnalysis.ipynb will need the download_data() cell uncommented to download the data, this notebook will also take several hours to run**
 
 ## Running the Code
-This code should all be self contained. The two notebooks should be runnable after pip installing the necessary packages, most likely just plotly. We had pre run both notebooks for your convenience. The CountryAndGlobalAnalysis takes a **very** long time to run due to processing and filtering the 53 million row dataset.
+This code should all be self contained. The two notebooks should be runnable after pip installing the necessary packages, most likely just plotly. We had prerun both notebooks for your convenience. The CountryAndGlobalAnalysis takes a **very** long time to run due to processing and filtering the 53 million row dataset.
 
-
-
+## Third Party Modules
+1. Plotly (to generate the nicely formated graphs)
+2. CountryInfo (to gather population information for all countries)
