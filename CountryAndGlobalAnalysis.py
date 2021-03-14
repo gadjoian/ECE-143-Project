@@ -15,7 +15,42 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import plotly.io as pio
-
+def download_data():
+    '''
+    This method will download the data into the Data folder and allow you to run this notebook.
+    As the data for this project is roughly 53 million rows, it wouldn't fit in the repository.
+    '''
+    urls = ['https://zenodo.org/record/4485741/files/flightlist_20190101_20190131.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190201_20190228.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190301_20190331.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190401_20190430.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190501_20190531.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190501_20190531.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190701_20190731.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190701_20190731.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190801_20190831.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20190901_20190930.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20191001_20191031.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20191101_20191130.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20191201_20191231.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200101_20200131.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200201_20200229.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200301_20200331.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200401_20200430.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200501_20200531.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200601_20200630.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200701_20200731.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200801_20200831.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20200901_20200930.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20201001_20201031.csv.gz?download=1',
+            'https://zenodo.org/record/4485741/files/flightlist_20201101_20201130.csv.gz?download=1']
+    counter = 1
+    for url in urls:
+        r = requests.get(url, allow_redirects=True)
+        file_name = 'flightlist_{}.csv.gz'.format(counter)
+        open(file_name, 'wb').write(r.content)
+        counter += 1
+        
 def read_multiple_files(fields, filename_template):
     '''
     provide the file names to read in and the columns to read
