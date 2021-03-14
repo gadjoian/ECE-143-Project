@@ -15,7 +15,7 @@ Notebooks:<br />
 **2. Country_Wise_Plots.ipynb       : Contains plots related to country wise flight data analysis**<br />
 **3. Company_Wise_Plots.ipynb       : Contains plots related to company wise flight data analysis**<br />
 
-The pre-executed pdf version of these notebooks are also included in the root directory for you reference.  
+The pre-executed pdf version of these notebooks are also included in the root directory for your reference.  
 
 ## Running the Code
 This code should all be self contained. The three notebooks should be runnable after pip installing the necessary packages, most likely just plotly. We had pre run both notebooks for your convenience. The CountryAndGlobalAnalysis takes a **very** long time to run due to processing and filtering the 53 million row dataset.
